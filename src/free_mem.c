@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:59:30 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/07/06 15:16:08 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/04 11:19:01 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,10 @@ void	free_lst(t_lst **lst)
 	free(lst);
 }
 
-void	all_free(t_data *data, t_lst **lst_cmd, int *my_pipes)
+void	all_free(t_data *data, t_lst **lst_cmd)
 {
 	free_lst(lst_cmd);
-	free(my_pipes);
+	free(data->pipes);
 	free(data);
 }
 

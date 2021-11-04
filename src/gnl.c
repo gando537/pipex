@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 16:20:24 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/07/07 20:13:54 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/04 11:37:39 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	while (*s)
 		ft_putchar_fd(*s++, fd);
+}
+
+void	ft_putendl_fd(char const *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 
 void	get_next_line_bis(char **line, char *tmp, int l, char c)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.c                                            :+:      :+:    :+:   */
+/*   pipex_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/18 16:59:16 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/11/04 17:30:45 by mdiallo          ###   ########.fr       */
+/*   Created: 2021/11/04 17:28:45 by mdiallo           #+#    #+#             */
+/*   Updated: 2021/11/04 18:28:42 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int argc, char **argv, char **envp)
 {
 	t_data	*data;
 
-	if (argc != 5)
+	if (argc < 5)
 	{
 		ft_putstr_fd("Usage : - ./pipex infile cmd1...cmdn outfile\n", 2);
 		ft_putstr_fd("\t-./pipex here_doc LIMITER cmd1...cmdn outfile\n", 2);

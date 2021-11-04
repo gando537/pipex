@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:59:09 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/07/07 18:20:32 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/04 11:14:05 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_lst	**create_lst(int argc, char **argv, char **envp, t_data *data)
 	i = 0;
 	while (i < argc - data->x)
 	{
-		if (data->here_doc == 0)
+		if (data->heredoc == 0)
 			new_elm = ft_new_elm(argv[i + 2], envp);
 		else
 			new_elm = ft_new_elm(argv[i + 3], envp);

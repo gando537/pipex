@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:59:27 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/07/07 18:20:41 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/04 16:47:28 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	size;
-	char	*p_s1;
-	char	*p_s2;
+	char	*p_s;
 	char	*new_str;
 	char	*p_new_str;
 
@@ -26,13 +25,13 @@ char	*ft_strjoin(char *s1, char *s2)
 	new_str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!new_str)
 		return (NULL);
-	p_s1 = s1;
-	p_s2 = s2;
+	p_s = s1;
 	p_new_str = new_str;
-	while (*p_s1)
-		*p_new_str++ = *p_s1++;
-	while (*p_s2)
-		*p_new_str++ = *p_s2++;
+	while (*p_s)
+		*p_new_str++ = *p_s++;
+	p_s = s2;
+	while (*p_s)
+		*p_new_str++ = *p_s++;
 	*p_new_str = '\0';
 	return (new_str);
 }
