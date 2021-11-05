@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:59:22 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/11/05 15:31:13 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/05 18:01:33 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,6 @@ void	close_wait(t_data *data)
 	while (data->l < data->nb_pipes + 1)
 	{
 		wait(data->status);
-		if (data->tmp)
-			unlink(data->tmp);
 		data->l++;
 	}
 }
