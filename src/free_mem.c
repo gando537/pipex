@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:59:30 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/11/04 11:19:01 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/05 14:48:05 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ void	free_lst(t_lst **lst)
 
 void	all_free(t_data *data, t_lst **lst_cmd)
 {
+	if (data->tmp)
+		unlink(data->tmp);
 	free_lst(lst_cmd);
 	free(data->pipes);
 	free(data);

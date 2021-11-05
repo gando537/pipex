@@ -6,7 +6,7 @@
 /*   By: mdiallo <mdiallo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 16:59:16 by mdiallo           #+#    #+#             */
-/*   Updated: 2021/11/04 17:30:45 by mdiallo          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:32:10 by mdiallo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_data	*alloc_data(void)
 
 void	init_data(t_data *data, int argc, char **argv)
 {
+	data->tmp = (char *) NULL;
 	if (ft_strcmp(argv[1], "here_doc") == 0)
 	{
 		data->heredoc = 1;
